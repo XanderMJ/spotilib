@@ -48,7 +48,7 @@ def artists(Type):
 def track(Type):
 	if find_metadata() is None:
 		print "spotimeta wasn\'t able to get all metadata of current song"
-		return spotilib.artist()
+		return spotilib.song()
 	elif Type == 'name':
 		return find_metadata()[0]
 	elif Type == "uri":
