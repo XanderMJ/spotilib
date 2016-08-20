@@ -28,3 +28,16 @@ This library gives you easy acces to the current playing song in Spotify. It ret
 
 ######The library contains some options to create folders en .txt files. I have used those to store the information from songs I dont want to get played by Spotify.
 
+
+
+
+
+#spotimeta.py
+
+Spotimeta is a library that allows you to acces more of the metadata from the currently playing song. This library uses the *spotipy* library to search for missing data. At this moment the library is still very limmited.
+
+###What does it offer?
+The *spotilib* library can only give you the name of one artist, even if the song is a collaboration between mulitple artists. The *spotimeta* library tries to find the missing artists. As this is very early stage,it does not always succed in finding the wright information, in that case it returns an error and falls back to the *spotilib* results.
+
+###How does it work?
+*spotimeta.artists()* this returns a list op all the collaborating artist. On failure it returns an controlled error. 
