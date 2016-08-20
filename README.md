@@ -41,5 +41,8 @@ Spotimeta is a library that allows you to acces more of the metadata from the cu
 ###What does it offer?
 The *spotilib* library can only give you the name of one artist, even if the song is a collaboration between mulitple artists. The *spotimeta* library tries to find the missing artists. As this is very early stage,it does not always succed in finding the wright information, in that case it returns an error and falls back to the *spotilib* results.
 
+At this moment it is capable of returning the song info as text or as 'uri'. The 'uri' can be usefull if you are using *spotipy*.
 ###How does it work?
-*spotimeta.artists()* this returns a list op all the collaborating artist. On failure it returns an controlled error. 
+*spotimeta.artists(Type)* this returns a list op all the collaborating artist. *Type='name'* returns the name(s) of the artist(s). *Type='uri'* returns the spotify URI link(s).
+
+*spotimeta.track(Type)* this returns the current playing track. *Type='name'* returns the name of the track. *Type='uri'* returns the spotify URI link.
