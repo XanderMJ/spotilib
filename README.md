@@ -49,4 +49,4 @@ At this moment it is capable of returning the song info as text or as 'uri'. The
 
 
 ##Known Issues:
-*spotimeta.artists(Type)* won't succes in returning a value if an artist name (or a part of it) also occurs in the track title. In this case it returns the valua "None". 
+*spotimeta.artists(Type)* won't succes in returning a value if an artist name (or a part of it) also occurs in the track title. In this case it returns the value "None". 
