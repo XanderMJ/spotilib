@@ -1,5 +1,4 @@
 import spotipy
-import pprint
 import spotilib
 
 sp = spotipy.Spotify()
