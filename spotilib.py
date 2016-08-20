@@ -23,16 +23,22 @@ def song_info():
 	return song_info
 
 def artist():
-	temp = song_info()
-	artist, song = temp.split("-",1)
-	artist = artist.strip()
-	return artist
+	try:
+		temp = song_info()
+		artist, song = temp.split("-",1)
+		artist = artist.strip()
+		return artist
+	except:
+		return "There is noting playing at this moment"
 	
 def song():
-	temp = song_info()
-	artist, song = temp.split("-",1)
-	song = song.strip()
-	return song
+	try:
+		temp = song_info()
+		artist, song = temp.split("-",1)
+		song = song.strip()
+		return song
+	except:
+		return "There is noting playing at this moment"
 	
 ###SpotifyBlock###
 def createfolder(folder_path="C:\SpotiBlock"):
