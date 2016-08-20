@@ -23,7 +23,7 @@ This library gives you easy acces to the current playing song in Spotify. It ret
 
 *spotilib.previous()* returns to the beginning of the song, or skips to previous song (depending on how long the song is playing)
 
-*spotilib.pauze()* pauzes the playing media, if the media is already pauzed it wil resume playing
+*spotilib.pauze()* pauzes the playing media, if the media is already paused it wil resume playing
 
 *spotilib.mute()* mutes the audio (from all media, not only Spotify)
 
