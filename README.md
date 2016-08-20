@@ -1,3 +1,5 @@
+######Hello there! Just a quick headsup, I'm pretty new to python and my code may not me the best. So feel free to give some suggestions or tips!
+
 # spotilib.py
 I'm working on a python library to access metadata from Spotify on windows, keep in mind this is still work in progress. I wanted to make this libraby so i could ignore speciffic songs on Spotify and prevent them from playing on my PC. At this moment I completed a python script which runs in the background and allows blocking songs from playing (with the use of hotkeys). If people are intrested I will upload the script as well *(see: spotimeta.py)*.
 
