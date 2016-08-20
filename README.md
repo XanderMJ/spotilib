@@ -2,7 +2,7 @@
 I'm working on a python library to access metadata from Spotify on windows, keep in mind this is still work in progress. I wanted to make this libraby so i could ignore speciffic songs on Spotify and prevent them from playing on my PC. At this moment I completed a python script which runs in the background and allows blocking songs from playing (with the use of hotkeys). If people are intrested I will upload the script as well.
 
 ###What does it offer?
-This library gives you easy acces to the current playing song in Spotify. It returns the song title and artist name within a simgle line of code. At this moment the artist information is limited to one artist name, this is due to the way Spotify represents the song information in the windowtitle (and ofcourse the lack of a Spotify API for windows). However, I'm already working on a litle workaround for this problem!
+This library gives you easy acces to the current playing song in Spotify. It returns the song title and artist name within a single line of code. At this moment the artist information is limited to one artist name, this is due to the way Spotify represents the song information in the windowtitle (and ofcourse the lack of a Spotify API for windows). However, I'm already working on a litle workaround for this problem!
 
 ###How does it work?
 *spotilib.getwindow(Title="SpotifyMainWindow")* returns the id from the Spotify window
