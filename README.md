@@ -46,3 +46,7 @@ At this moment it is capable of returning the song info as text or as 'uri'. The
 *spotimeta.artists(Type)* this returns a list op all the collaborating artist. *Type='name'* returns the name(s) of the artist(s). *Type='uri'* returns the spotify URI link(s).
 
 *spotimeta.track(Type)* this returns the current playing track. *Type='name'* returns the name of the track. *Type='uri'* returns the spotify URI link.
+
+
+##Known Issues:
+*spotimeta.artists(Type)* won't succes in returning a value if an artist name (or a part of it) also occurs in the track title. In this case it returns the valua "None". 
