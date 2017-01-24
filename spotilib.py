@@ -25,7 +25,7 @@ def song_info():
 def artist():
 	try:
 		temp = song_info()
-		artist, song = temp.split("-",1)
+		artist, song = temp.split(" - ",1)
 		artist = artist.strip()
 		return artist
 	except:
@@ -34,7 +34,7 @@ def artist():
 def song():
 	try:
 		temp = song_info()
-		artist, song = temp.split("-",1)
+		artist, song = temp.split(" - ",1)
 		song = song.strip()
 		return song
 	except:
