@@ -14,7 +14,14 @@ Media_Mute = 0xAD
 def getwindow(Title="SpotifyMainWindow"):
 	window_id = win32gui.FindWindow(Title, None)
 	return window_id
-	
+
+###SpotifyInfoForUwpVersion###
+def getwindow_uwp(hwnd, hwnds):
+        song_info= win32gui.GetWindowText(hwnd)
+        if win32gui.GetClassName(hwnd) == "Chrome_WidgetWin_0" and len(song_info) > 0:
+        	hwnds.append(song_info)
+
+
 def song_info():
 	try:
 		song_info = win32gui.GetWindowText(getwindow())
