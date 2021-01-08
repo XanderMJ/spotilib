@@ -25,6 +25,10 @@ def getwindow_uwp(hwnd, hwnds):
 def song_info():
 	try:
 		song_info = win32gui.GetWindowText(getwindow())
+		if len(song_info) == 0:
+			hwnds = []
+			win32gui.EnumWindows(getwindow_uwp, hwnds)
+			song_info = hwnds[0]
 	except:
 		pass
 	return song_info
