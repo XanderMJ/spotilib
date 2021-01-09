@@ -1,7 +1,5 @@
 import win32gui
 import win32api
-import win32process
-import psutil
 import os
 
 ###Virtual-KeyCodes###
@@ -10,19 +8,27 @@ Media_Previous = 0xB1
 Media_Pause = 0xB3 ##Play/Pause
 Media_Mute = 0xAD
 
-def win_enum_handler(hwnd, names):
-    if win32gui.IsWindowVisible(hwnd):
-        pid = win32process.GetWindowThreadProcessId(hwnd)
-        process_name = psutil.Process(pid[1]).name()
-        music_name = win32gui.GetWindowText(hwnd)
-        if process_name == 'Spotify.exe' and len(music_name) != 0:
-            names.append(music_name)
+
+
+###SpotifyInfo###
+def getwindow(Title="SpotifyMainWindow"):
+	window_id = win32gui.FindWindow(Title, None)
+	return window_id
+
+###SpotifyInfoForUwpVersion###
+def getwindow_uwp(hwnd, hwnds):
+        song_info= win32gui.GetWindowText(hwnd)
+        if win32gui.GetClassName(hwnd) == "Chrome_WidgetWin_0" and len(song_info) > 0:
+        	hwnds.append(song_info)
+
 
 def song_info():
 	try:
-		name = []
-		win32gui.EnumWindows(win_enum_handler, name)
-		song_info = name[0]
+		song_info = win32gui.GetWindowText(getwindow())
+		if len(song_info) == 0:
+			hwnds = []
+			win32gui.EnumWindows(getwindow_uwp, hwnds)
+			song_info = hwnds[0]
 	except:
 		pass
 	return song_info
